@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#dark-toggleAC {
+  display: none; 
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.checkbox-visual {
+  pointer-events: none;
+  accent-color: #2196F3;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
+.nav-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+}
+
+.content h2 {
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#dark-toggle:checked ~ .dashboard .header {
+  background-color: #222;
+  color: #ddd;
+}
+
+#dark-toggle:checked ~ .dashboard .footer {
+  background-color: #222;
+  color: #ddd;
+}
+
+#dark-toggle:checked ~ .dashboard .sidebar {
+  background-color: #333;
+}
+
+#dark-toggle:checked ~ .dashboard .nav-list li a {
+  color: #bbb;
+}
+
+#dark-toggle:checked ~ .dashboard .content {
+  background-color: #111;
+  color: #ddd;
+}
+
+#dark-toggle:checked ~ .dashboard .toggle-label {
+  color: #ddd;
+}
